@@ -1,4 +1,4 @@
-# 🚀 Telegram Wake-on-LAN Bot with ESP32
+# 🤖 Telegram Wake-on-LAN Bot with ESP32
 
 This project allows you to turn on a device in your local network using **Wake-on-LAN** via a **Telegram bot**, powered by an **ESP32** board connected to Wi-Fi.
 
