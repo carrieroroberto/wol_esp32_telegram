@@ -43,7 +43,7 @@ Install these libraries via the **Arduino Library Manager** or manually:
 
 Ecco la frase corretta in inglese:
 
-Modify the `credentials.h` file appropriately, or create a new file with this name in the project root with the following content:
+Modify the `credentials.h` file with your data, or create a new file with this name in the project root containing the following content:
 
 ```cpp
 // credentials.h
