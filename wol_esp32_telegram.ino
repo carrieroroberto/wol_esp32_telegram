@@ -36,7 +36,7 @@ void handleNewMessages(int numNewMessages) {
     } else if (text == "/ping") {
       bot.sendMessage(chat_id, "Pong!", "");
     } else if (text == "/start") {
-      String welcome = "Welcome to **Roberto's WoL Bot**!\n";
+      String welcome = "Welcome to **WoL Bot**, " + from_name + "!\n";
       welcome += "/wol : Send the Magic Packet\n";
       welcome += "/ping : Check the bot status\n";
       bot.sendMessage(chat_id, welcome, "Markdown");
