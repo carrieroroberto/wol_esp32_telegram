@@ -41,7 +41,9 @@ Install these libraries via the **Arduino Library Manager** or manually:
 
 ## 🔐 Configuration
 
-Create a file named `credentials.h` in the project root with the following content:
+Ecco la frase corretta in inglese:
+
+Modify the `credentials.h` file appropriately, or create a new file with this name in the project root with the following content:
 
 ```cpp
 // credentials.h
