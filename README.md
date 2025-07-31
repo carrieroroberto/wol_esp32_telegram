@@ -1,48 +1,116 @@
-# 🔌 Wake-on-LAN Telegram Bot for ESP32
+# 🚀 ESP32 Telegram Bot - Wake On LAN (WoL)
 
-<div align="center">
-  <img src="https://img.shields.io/badge/platform-ESP32-blue.svg" />
-  <img src="https://img.shields.io/badge/telegram-bot-blue?logo=telegram" />
-  <img src="https://img.shields.io/badge/status-online-brightgreen" />
-</div>
+Welcome to the **ESP32 Telegram Bot** project! This bot lets you remotely wake up your PC using *Wake On LAN* technology, check its status, and interact via Telegram — all controlled by your ESP32 board.
 
 ---
 
-## ❓ What is this?
+## ⚙️ Features
 
-This is a lightweight and secure project for your **ESP32** that lets you control your PC (or other WoL-compatible devices) remotely using a **Telegram bot**.
-
-With simple commands, you can:
-- ✅ Check if your PC is online
-- 🚀 Wake it up with a Magic Packet
-- 📊 Monitor the bot’s status
-- 💬 Interact from anywhere using Telegram
-
----
-
-## 🎯 Features
-
-- 🔒 Works with authorized users only
-- 📡 Sends Magic Packet via Wake-on-LAN (UDP)
-- 🌐 Supports HTTPS with proper time sync
-- 💬 Clean and interactive Telegram messages
-- 💻 Checks device availability using ICMP Ping
-- 🛠️ Easy to configure via `config.h`
+- 🔌 **Wake On LAN**: Send a Magic Packet to power on your PC remotely  
+- 📡 **Ping**: Check if your PC is currently online or offline  
+- 📊 **Status**: View bot status, WiFi info, and uptime  
+- 👋 **Start & Help commands**: Get a warm welcome and list of available commands  
+- 🔒 Secure connection using TLS certificates  
+- Easy to customize for your own WiFi, PC, and Telegram bot settings
 
 ---
 
-## 🚀 How to Use
+## 🧰 What You Need
 
-### 1. ⚙️ Setup
+- ESP32 development board  
+- PC with WoL support enabled and MAC address available  
+- WiFi network credentials (SSID and password)  
+- Telegram bot token (from [BotFather](https://t.me/BotFather))  
+- Arduino IDE or PlatformIO for flashing the ESP32
 
-- Clone the repository
-- Open with [Arduino IDE](https://www.arduino.cc/en/software)
-- Install the required libraries (see below)
-- Modify `config.h` with your values:
-  ```cpp
-  #define WIFI_SSID      "YourWiFiSSID"
-  #define WIFI_PASS      "YourWiFiPassword"
-  #define BOT_TOKEN      "123456:ABC-YOUR-BOT-TOKEN"
-  #define ALLOWED_ID     123456789  // Your Telegram user ID
-  #define PC_IP          IPAddress(192, 168, 1, 100)
-  #define MAC_ADDR       {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED}
+---
+
+## 📦 Included Files
+
+- `main.ino` — Main program with Telegram bot logic  
+- `config.h` — Configuration constants for WiFi, bot token, PC IP, MAC, etc.  
+- `README.md` — This document  
+
+---
+
+## ⚡ Setup Instructions
+
+1. **Configure `config.h`**  
+   Update your WiFi credentials, Telegram bot token, allowed user ID, PC IP and MAC address.
+
+2. **Enable WoL on your PC**  
+   Make sure Wake On LAN is enabled in BIOS and network adapter settings.
+
+3. **Install Arduino Libraries**  
+   - WiFi  
+   - WiFiMulti  
+   - WiFiClientSecure  
+   - WiFiUDP  
+   - ESPping  
+   - WakeOnLan  
+   - UniversalTelegramBot  
+   - ArduinoJson  
+
+4. **Flash the ESP32**  
+   Upload the code using Arduino IDE or PlatformIO.
+
+5. **Use Telegram**  
+   Open Telegram, start your bot, and send commands like `/wol`, `/ping`, `/status`, `/help`.
+
+---
+
+## 📋 Available Commands
+
+| Command  | Description                               | Emoji         |
+| -------- | --------------------------------------- | ------------- |
+| `/start` | Welcome message and bot introduction    | 👋🏻           |
+| `/wol`   | Send Magic Packet to power on your PC   | 🚀           |
+| `/ping`  | Check if the PC is on or reachable      | 💖           |
+| `/status`| Show current bot status and uptime      | 📊           |
+| `/help`  | List all available commands              | ❓           |
+
+---
+
+## 💡 How It Works
+
+- ESP32 connects to your WiFi network.  
+- It listens for Telegram messages from your allowed user ID only.  
+- When you send `/wol`, it sends a Magic Packet to your PC’s MAC address.  
+- `/ping` uses ICMP ping to check if your PC is online.  
+- `/status` reports bot uptime and WiFi info.  
+- Time is synchronized via NTP to keep logs accurate.
+
+---
+
+## 🔐 Security Notes
+
+- Only your Telegram user ID can control the bot (configured in `config.h`).  
+- Uses secure TLS connection to Telegram API.  
+- Avoid sharing your bot token or WiFi credentials publicly.  
+
+---
+
+## 🎨 Customization Tips
+
+- Change bot messages or add new commands.  
+- Modify `BOT_MTBS` interval to control how often the bot polls Telegram.  
+- Add RGB LED control for status indication.  
+- Integrate other IoT devices or sensors.  
+
+---
+
+## 🛠 Troubleshooting
+
+- Make sure your PC supports WoL and network allows Magic Packets.  
+- Verify WiFi connection and correct credentials.  
+- Confirm Telegram bot token and user ID are set correctly.  
+- Use Serial Monitor for debug messages.  
+
+---
+
+## 🙌 Thanks for checking out this project!  
+Feel free to fork and improve it. For questions or help, just ask!
+
+---
+
+# 🔌 Ready to wake up your PC remotely? Let’s go! 🚀
