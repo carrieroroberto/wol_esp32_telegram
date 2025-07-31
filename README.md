@@ -1,57 +1,54 @@
-# 🤖 Telegram Wake-on-LAN Bot with ESP32
+# ⚡ Wake-on-LAN Telegram Bot for ESP32
 
-This project allows you to turn on a device in your local network using **Wake-on-LAN** via a **Telegram bot**, powered by an **ESP32** board connected to Wi-Fi.
-
----
-
-## 📦 Features
-
-- `/wol` command to send the Magic Packet
-- `/ping` command to check bot responsiveness
-- `/start` command to display help message
-- User authentication via `chat_id`
-- Dynamic Wi-Fi connection management
-- Secure HTTPS communication with Telegram API using root certificate
+<div align="center">
+  <img src="https://img.shields.io/badge/platform-ESP32-blue.svg" />
+  <img src="https://img.shields.io/badge/telegram-bot-blue?logo=telegram" />
+  <img src="https://img.shields.io/badge/status-online-brightgreen" />
+</div>
 
 ---
 
-## 🔧 Hardware Requirements
+## 👋 What is this?
 
-- **ESP32** development board
-- Wi-Fi network
-- A PC configured for **Wake-on-LAN** (BIOS and OS settings enabled)
+This is a lightweight and secure project for your **ESP32** that lets you control your PC (or other WoL-compatible devices) remotely using a **Telegram bot**.
 
----
-
-## 📚 Required Libraries
-
-Install these libraries via the **Arduino Library Manager** or manually:
-
-- [`WiFi`](https://www.arduino.cc/en/Reference/WiFi)
-- `WiFiMulti` *(part of the ESP32 core)*
-- `WiFiClientSecure`
-- `WiFiUDP`
-- [`WakeOnLan`](https://github.com/a7md0/WakeOnLan)
-- [`UniversalTelegramBot`](https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot)
-- [`ArduinoJson`](https://arduinojson.org/) (version 6 or higher)
-
-> ✅ Make sure to select **ESP32 Dev Module** under **Tools > Board** in the Arduino IDE.
+With simple commands, you can:
+- ✅ Check if your PC is online
+- 🚀 Wake it up with a Magic Packet
+- 📊 Monitor the bot’s status
+- 💬 Interact from anywhere using Telegram
 
 ---
 
-## 🔐 Configuration
+## 🎯 Features
 
-Ecco la frase corretta in inglese:
+- 🔒 Works with authorized users only
+- 📡 Sends Magic Packet via Wake-on-LAN (UDP)
+- 🌐 Supports HTTPS with proper time sync
+- 💬 Clean and interactive Telegram messages
+- 💻 Checks device availability using ICMP Ping
+- 🛠️ Easy to configure via `config.h`
 
-Modify the `credentials.h` file with your data, or create a new file with this name in the project root containing the following content:
+---
 
-```cpp
-// credentials.h
+## 📷 Preview
 
-#define WIFI_SSID "your_wifi_ssid"
-#define WIFI_PASS "your_wifi_password"
+<img src="https://user-images.githubusercontent.com/your-screenshot-path/demo.gif" width="400" alt="Demo Preview" />
 
-#define BOT_TOKEN "123456789:ABCdefGHIjklMNOpqrSTUvwxYZ" // Get this from @BotFather
-#define ALLOWED_ID "123456789"  // Telegram chat_id of the authorized user
+---
 
-#define MAC_ADDR {0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF}  // MAC address of the target PC
+## 🚀 How to Use
+
+### 1. ⚙️ Setup
+
+- Clone the repository
+- Open with [Arduino IDE](https://www.arduino.cc/en/software)
+- Install the required libraries (see below)
+- Modify `config.h` with your values:
+  ```cpp
+  #define WIFI_SSID      "YourWiFiSSID"
+  #define WIFI_PASS      "YourWiFiPassword"
+  #define BOT_TOKEN      "123456:ABC-YOUR-BOT-TOKEN"
+  #define ALLOWED_ID     123456789  // Your Telegram user ID
+  #define PC_IP          IPAddress(192, 168, 1, 100)
+  #define MAC_ADDR       {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED}
