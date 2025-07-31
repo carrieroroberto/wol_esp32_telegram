@@ -31,12 +31,6 @@ With simple commands, you can:
 
 ---
 
-## 📷 Preview
-
-<img src="https://user-images.githubusercontent.com/your-screenshot-path/demo.gif" width="400" alt="Demo Preview" />
-
----
-
 ## 🚀 How to Use
 
 ### 1. ⚙️ Setup
