@@ -1,4 +1,4 @@
-# ⚡ Wake-on-LAN Telegram Bot for ESP32
+# 🔌 Wake-on-LAN Telegram Bot for ESP32
 
 <div align="center">
   <img src="https://img.shields.io/badge/platform-ESP32-blue.svg" />
@@ -8,7 +8,7 @@
 
 ---
 
-## 👋 What is this?
+## ❓ What is this?
 
 This is a lightweight and secure project for your **ESP32** that lets you control your PC (or other WoL-compatible devices) remotely using a **Telegram bot**.
 
