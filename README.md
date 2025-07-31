@@ -61,13 +61,13 @@ Welcome to the **ESP32 Telegram Bot** project! This bot lets you remotely wake u
 
 ## 📋 Available Commands
 
-| Command  | Description                               | Emoji         |
-| -------- | --------------------------------------- | ------------- |
-| `/start` | Welcome message and bot introduction    | 👋🏻           |
-| `/wol`   | Send Magic Packet to power on your PC   | 🚀           |
-| `/ping`  | Check if the PC is on or reachable      | 💖           |
-| `/status`| Show current bot status and uptime      | 📊           |
-| `/help`  | List all available commands              | ❓           |
+| Command  | Description                             |
+| -------- | --------------------------------------- |
+| `/start` | Welcome message and bot introduction |
+| `/wol`   | Send Magic Packet to power on your PC |
+| `/ping`  | Check if the PC is on or reachable |
+| `/status`| Show current bot status and uptime |
+| `/help`  | List all available commands |
 
 ---
 
@@ -86,31 +86,4 @@ Welcome to the **ESP32 Telegram Bot** project! This bot lets you remotely wake u
 
 - Only your Telegram user ID can control the bot (configured in `config.h`).  
 - Uses secure TLS connection to Telegram API.  
-- Avoid sharing your bot token or WiFi credentials publicly.  
-
----
-
-## 🎨 Customization Tips
-
-- Change bot messages or add new commands.  
-- Modify `BOT_MTBS` interval to control how often the bot polls Telegram.  
-- Add RGB LED control for status indication.  
-- Integrate other IoT devices or sensors.  
-
----
-
-## 🛠 Troubleshooting
-
-- Make sure your PC supports WoL and network allows Magic Packets.  
-- Verify WiFi connection and correct credentials.  
-- Confirm Telegram bot token and user ID are set correctly.  
-- Use Serial Monitor for debug messages.  
-
----
-
-## 🙌 Thanks for checking out this project!  
-Feel free to fork and improve it. For questions or help, just ask!
-
----
-
-# 🔌 Ready to wake up your PC remotely? Let’s go! 🚀
+- Avoid sharing your bot token or WiFi credentials publicly.
