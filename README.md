@@ -11,7 +11,6 @@ Welcome to the **ESP32 Telegram Bot** project! This bot lets you remotely wake u
 - 📊 **Status**: View bot status, WiFi info, and uptime  
 - 👋 **Start & Help commands**: Get a warm welcome and list of available commands  
 - 🔒 Secure connection using TLS certificates  
-- Easy to customize for your own WiFi, PC, and Telegram bot settings
 
 ---
 
