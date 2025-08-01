@@ -54,7 +54,7 @@ Welcome to the **ESP32 Telegram Bot** project! This bot lets you remotely wake u
    Upload the code using Arduino IDE or PlatformIO.
 
 5. **Use Telegram**  
-   Open Telegram, start your bot, and send commands like `/wol`, `/ping`, `/status`, `/help`.
+   Open Telegram, start your bot, and send commands like `/wol`, `/ping`, `/status`, `/start`.
 
 ---
 
@@ -66,7 +66,6 @@ Welcome to the **ESP32 Telegram Bot** project! This bot lets you remotely wake u
 | `/wol`   | Send Magic Packet to power on your PC |
 | `/ping`  | Check if the PC is on or reachable |
 | `/status`| Show current bot status and uptime |
-| `/help`  | List all available commands |
 
 ---
 
